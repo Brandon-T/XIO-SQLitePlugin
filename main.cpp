@@ -125,6 +125,7 @@ static const char* PascalExports[] =
     "SQLite_ErrorCode", "function SQLite.errorCode(): Integer;",
     "SQLite_ErrorMessage", "function SQLite.errorMessage(): PChar;",
     "SQLite_ErrorString", "function SQLite.errorString(errorCode: Integer): PChar;",
+    "SQLite_Exec", "function SQLite.exec(sql: String): Integer;",
     "SQLite_LastInsertRowId", "function SQLite.lastInsertedRowId(): Int64;",
     "SQLite_LibVersion", "function SQLite.libVersion(): PChar;",
     "SQLite_LibVersionNumber", "function SQLite.libVersionNumber(): Integer;",
