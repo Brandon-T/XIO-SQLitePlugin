@@ -32,26 +32,6 @@ HMODULE module = NULL;
 
 
 
-/*********************************************************************************************************************/
-
-void* allocate_memory(int32_t size, int32_t element_size, void* (*SimbaAllocator)(int size))
-{
-    int32_t new_size = size * element_size;
-    new_size += (sizeof(int32_t) * 2);
-
-    void* ptr = SimbaAllocator(new_size);
-    *((int*)ptr) = 1; //reference count.
-    ptr = ((int*)ptr) + 1;
-    *((int*)ptr) = size - 1; //size.
-    ptr = ((int*)ptr) + 1;
-    return ptr;
-}
-
-int32_t pascal_length(void* arr)
-{
-    return (*((int32_t*)arr) - 1) + 1;
-}
-
 
 /*********************************************************************************************************************/
 
